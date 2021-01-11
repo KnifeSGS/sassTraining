@@ -1,0 +1,55 @@
+// Műveletek eredményének vizsgálata
+// Parancs: sass tananyag\hamburger_menu\src\scss\operators.scss
+@debug ---------------------EQUALITY--------------------;
+@debug 1px==1;
+@debug 1px==1px;
+
+@debug 10px==1cm;
+@debug 48px==0.5in;
+@debug 0.99999999999999999999==1;
+
+@debug Arial=="Arial";
+@debug Arial=='Arial';
+@debug "Arial"=="Arial";
+
+@debug true==true;
+@debug true !=false;
+
+@debug ---------------------RELATIONS--------------------;
+
+@debug 100>50;
+@debug 10px < 17px;
+@debug 96px>=1in;
+@debug 1000ms <=10s;
+
+@debug ---------------------MATH--------------------;
+
+@debug 10s+5s;
+@debug 10s - 50ms;
+@debug 10px * 2;
+@debug 10px * 2px;
+@debug 10px / 2px;
+@debug 10px / 2;
+@debug (10px / 2px);
+@debug (10px / 2);
+@debug 10px % 2;
+
+@debug ---------------------STRING--------------------;
+
+@debug "Times " + "New Roman";
+.container::before {
+  font: "Times " + "New Roman", Times, serif;
+}
+.container::before {
+  font: 16px/16px "Times " + "New Roman", Times, serif;
+  content: track - list;
+  content: track / list;
+  content: track + list;
+  content: #("track" + "list"); //interpolation fontos pl: .col#{$postfix}::before
+}
+
+@debug ---------------------BOOLEAN--------------------;
+
+@debug not true;
+@debug true or false;
+@debug true and false;
