@@ -1,0 +1,34 @@
+/* MAP: get, has-key, keys, merge, remove, values */
+@use "sass:map";
+
+$colors: (
+  success: green,
+  warning: orange,
+  danger: red
+);
+
+$base-colors: (
+  white: white,
+  black: black
+)
+
+/*ha nincs use sassmap: globális függvényt használva
+@debug map-get($map: $colors, $key: success);
+@debug map-get($colors, warning);*/
+
+/*ha van use sassmap:*/;
+@debug map.get($map: $colors, $key: success);
+@debug map.get($colors, warning);
+
+@debug map.has-key($colors, warning);
+
+@debug map.keys($colors);
+
+@debug map.merge($colors, $base-colors);
+$all-colors: (map.merge($colors, $base-colors));
+@debug $all-colors;
+
+@debug map.remove($colors, success); //valójában nem módosítja a colorst, csak a parancs erejéig veszi ki
+$colors: map-remove($colors, success); // így ki is veszi
+
+@debug map.values($colors);

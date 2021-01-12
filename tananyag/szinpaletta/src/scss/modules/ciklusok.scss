@@ -1,0 +1,38 @@
+// for ciklus, pl létrehoz változónyi colt
+$grid: 12;
+@for $i from 1 through $grid {
+  .col-#{$i} {
+    width: 100% * $i / $grid;
+  }
+};
+
+// each
+$colors: (
+  black: black,
+  white: white,
+  success: green,
+  warning: orange,
+  danger: red
+);
+
+@each $key, $value in $colors {
+  .text--#{$key} {
+    color: $value;
+  }
+};
+
+// if..else
+$colors2: (
+  blackish: black,
+  whiteish: white,
+  successish: green,
+  warningish: orange,
+  dangerish: red
+);
+@each $key, $value in $colors2 {
+  @if $key != blackish and $key != whiteish {
+    .text--#{$key} {
+      color: $value;
+    }
+  }
+};
