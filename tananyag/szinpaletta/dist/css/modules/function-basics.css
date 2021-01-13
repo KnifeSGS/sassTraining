@@ -1,0 +1,17 @@
+/* Error: "Element not exists"
+ *    ,
+ * 44 | @debug delete-list-element(0 1 2 3 4, 6);
+ *    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   tananyag\szinpaletta\src\scss\modules\function-basics.scss 44:8  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: "Element not exists"\a    \2577 \a 44 \2502  @debug delete-list-element(0 1 2 3 4, 6);\a    \2502         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   tananyag\\szinpaletta\\src\\scss\\modules\\function-basics.scss 44:8  root stylesheet';
+}
