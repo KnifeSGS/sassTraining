@@ -1,6 +1,7 @@
 @use "../variables/colors";
 @use "../mixins/texts";
 @use "../functions/var.scss" as *;
+@use "../functions/get-default-theme.scss" as *;
 @use "sass:map";
 
 .text {
@@ -8,4 +9,4 @@
   padding: 1rem 0;
 };
 
-@include texts.generate-colored-texts(map.merge(var(themes-#{var(defaultTheme)}), var(base)));
+@include texts.generate-colored-texts(map.merge(get-default-theme(), var(base)));
